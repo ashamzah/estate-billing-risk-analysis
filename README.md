@@ -197,6 +197,7 @@ Analisis ERP logical error mengidentifikasi invoice dengan status `Paid` tetapi 
 | PowerPoint Presentation | [Open Presentation Folder](https://drive.google.com/drive/folders/1OQqQ37DDp1bikiGwiu11A8IK3GgJwfd3?usp=sharing) |
 | Personal Blog | [arissandohamzah.hantulaut.web.id](https://arissandohamzah.hantulaut.web.id/) |
 | LinkedIn | [Aris Sando Hamzah](https://www.linkedin.com/in/aris-sando-hamzah-5391501ab/) |
+| GitHub Repository | [estate-billing-risk-analysis](https://github.com/ashamzah/estate-billing-risk-analysis) |
 
 ---
 
