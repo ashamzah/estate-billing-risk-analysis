@@ -4,19 +4,19 @@
 
 ![Key Visual](images/key_visual.png)
 
-This project analyzes township estate billing data to identify revenue leakage, collection risks, data quality issues, utility billing anomalies, and ERP logical errors. The analysis supports a **billing control tower** approach to improve cashflow visibility, collection effectiveness, billing accuracy, and operational control.
+Project ini menganalisis data billing estate township untuk mengidentifikasi **revenue leakage**, risiko collection, isu kualitas data, anomali billing utilitas, dan logical error pada sistem ERP. Analisis ini mendukung pendekatan **billing control tower** untuk meningkatkan visibilitas cashflow, efektivitas collection, akurasi billing, dan kontrol operasional.
 
 ---
 
-## Project Overview
+## Gambaran Project
 
-Township management revenue can be affected by unpaid IPL invoices, overdue receivables, vacant units, incomplete owner contact data, inconsistent payment method records, utility billing outliers, and ERP system anomalies.
+Revenue township management dapat terdampak oleh invoice IPL yang belum dibayar, overdue receivables, unit vacant, data kontak pemilik yang tidak lengkap, pencatatan payment method yang tidak konsisten, outlier pemakaian air, serta anomali pada sistem ERP.
 
-This project focuses on identifying the most critical billing and collection risks, then translating the findings into actionable recommendations for **risk-based collection**, **billing validation**, and **data quality improvement**.
+Project ini berfokus untuk mengidentifikasi risiko billing dan collection yang paling kritikal, lalu menerjemahkan hasil analisis menjadi rekomendasi yang actionable untuk **risk-based collection**, **validasi billing**, dan **perbaikan kualitas data**.
 
 ---
 
-## Repository Structure
+## Struktur Repository
 
 ```text
 .
@@ -34,48 +34,48 @@ This project focuses on identifying the most critical billing and collection ris
 └── requirements.txt
 ```
 
-### File Description
+### Deskripsi File
 
-| File / Folder | Description |
+| File / Folder | Deskripsi |
 |---|---|
-| `README.md` | Project documentation, business context, key findings, recommendations, and resource links |
-| `SML_Estate_Billing_Control_Tower_Analysis.ipynb` | Main notebook containing data cleaning, analysis, visualization, and insight generation |
-| `images/dashboard_preview.png` | Dashboard preview image for portfolio documentation |
-| `images/executive_summary.png` | Executive summary visual used to summarize priority areas |
-| `images/key_visual.png` | Main visual representation of conclusion, risks, and improvement focus |
-| `presentation/SML_Estate_Billing_Control_Tower_Analysis.pdf` | Final presentation deck in PDF format |
-| `requirements.txt` | Python dependencies used in the analysis |
+| `README.md` | Dokumentasi project, konteks bisnis, key findings, rekomendasi, dan resource link |
+| `SML_Estate_Billing_Control_Tower_Analysis.ipynb` | Notebook utama berisi data cleaning, analisis, visualisasi, dan insight generation |
+| `images/dashboard_preview.png` | Preview dashboard untuk dokumentasi portfolio |
+| `images/executive_summary.png` | Visual executive summary untuk merangkum area prioritas |
+| `images/key_visual.png` | Visual utama yang menggambarkan conclusion, risiko, dan fokus perbaikan |
+| `presentation/SML_Estate_Billing_Control_Tower_Analysis.pdf` | Final presentation deck dalam format PDF |
+| `requirements.txt` | Daftar library Python yang digunakan dalam analisis |
 
 ---
 
 ## Business Objectives
 
-The main objectives of this project are:
+Tujuan utama project ini adalah:
 
-- Identify revenue leakage from unpaid and overdue IPL billings.
-- Analyze aging schedule to determine the highest-risk outstanding receivables.
-- Evaluate vacant property risk and its relationship with billing arrears.
-- Assess collection data quality through missing contact number analysis.
-- Standardize payment method categories to support finance reconciliation.
-- Detect extreme water usage outliers that may indicate utility billing issues.
-- Identify ERP logical errors, especially paid invoices recorded before handover date.
-- Provide actionable recommendations for risk-based collection and billing control.
+- Mengidentifikasi revenue leakage dari billing IPL yang berstatus unpaid dan overdue.
+- Menganalisis aging schedule untuk menentukan outstanding receivables dengan risiko tertinggi.
+- Mengevaluasi risiko unit vacant dan hubungannya dengan tunggakan billing.
+- Menilai kualitas data collection melalui analisis missing contact number.
+- Menstandarisasi kategori payment method untuk mendukung rekonsiliasi finance.
+- Mendeteksi extreme water usage outlier yang dapat mengindikasikan masalah utility billing.
+- Mengidentifikasi logical error pada ERP, terutama invoice paid yang tercatat sebelum handover date.
+- Memberikan rekomendasi actionable untuk risk-based collection dan billing control.
 
 ---
 
 ## Dataset Overview
 
-The analysis uses estate billing data from BigQuery covering the period **2021–2024** with approximately **300,000 records**.
+Analisis menggunakan data estate billing dari BigQuery dengan periode **2021–2024** dan jumlah data sekitar **300.000 records**.
 
-Main source tables:
+Tabel sumber utama:
 
-| Table | Description |
+| Tabel | Deskripsi |
 |---|---|
-| `clusters` | Township and cluster information |
-| `units` | Unit ownership, contact number, vacant status, and handover date |
-| `IPL billings` | Invoice, billing amount, water usage, payment status, payment method, and payment date |
+| `clusters` | Informasi township dan cluster |
+| `units` | Informasi unit, owner, contact number, vacant status, dan handover date |
+| `IPL billings` | Informasi invoice, billing amount, water usage, payment status, payment method, dan payment date |
 
-Clean data output:
+Output clean data:
 
 | Item | Value |
 |---|---|
@@ -85,28 +85,28 @@ Clean data output:
 | Data Warehouse | BigQuery |
 | Visualization Tool | Looker Studio |
 
-> Note: The original dataset is not included in this repository due to confidentiality. The notebook contains the analysis workflow and methodology.
+> Catatan: Dataset asli tidak disertakan dalam repository ini karena bersifat confidential. Notebook berisi workflow analisis dan metodologi yang digunakan.
 
 ---
 
 ## Methodology
 
-The project workflow consists of five main steps:
+Workflow project terdiri dari lima tahap utama:
 
 1. **Data Source**  
-   Import raw tables from BigQuery: clusters, units, and IPL billings.
+   Mengambil raw tables dari BigQuery: clusters, units, dan IPL billings.
 
 2. **Data Integration & Cleaning**  
-   Join datasets, format date columns, handle missing values, check duplicates, standardize payment method, and create anomaly flags.
+   Menggabungkan dataset, formatting kolom tanggal, handling missing values, duplicate check, standardisasi payment method, dan pembuatan anomaly flag.
 
 3. **Data Analysis**  
-   Perform exploratory data analysis, revenue leakage analysis, aging analysis, vacant risk analysis, collection data quality analysis, water outlier detection, and Chi-Square Test.
+   Melakukan exploratory data analysis, revenue leakage analysis, aging analysis, vacant risk analysis, collection data quality analysis, water outlier detection, dan Chi-Square Test.
 
 4. **Clean Data Export**  
-   Export the cleaned dataset back to BigQuery as `SML_clean.SML_data`.
+   Mengekspor clean dataset kembali ke BigQuery sebagai `SML_clean.SML_data`.
 
 5. **Data Visualization**  
-   Build dashboard pages in Looker Studio for executive overview, collection & aging, vacant property risk, water & utility, and data quality monitoring.
+   Membangun dashboard Looker Studio untuk executive overview, collection & aging, vacant property risk, water & utility, dan data quality monitoring.
 
 ---
 
@@ -126,31 +126,31 @@ The project workflow consists of five main steps:
 
 ### 1. Revenue Leakage
 
-Revenue leakage is measured through the ratio of unpaid and overdue billing amount. The tunggakan rate is relatively similar across townships, ranging from approximately **28.5% to 29.9%**. This indicates that collection risk is systemic across townships, not isolated to only one area.
+Revenue leakage diukur melalui rasio billing amount yang berstatus unpaid dan overdue. Rasio tunggakan relatif mirip antar township, yaitu sekitar **28,5% hingga 29,9%**. Hal ini menunjukkan bahwa risiko collection bersifat sistemik di seluruh township, bukan hanya terjadi pada satu area tertentu.
 
 ### 2. Aging Schedule
 
-Aging analysis shows that the largest outstanding amount is concentrated in invoices aged more than 6 months. The outstanding amount in the `> 6 months` bucket reaches approximately **Rp82.51 billion**. BSD City, Kota Wisata, and Grand Wisata contribute around **82.7%** of total delayed revenue over 6 months, making them the main priority for collection recovery.
+Analisis aging menunjukkan bahwa outstanding terbesar terkonsentrasi pada invoice dengan aging lebih dari 6 bulan. Outstanding pada bucket `> 6 months` mencapai sekitar **Rp82,51 miliar**. BSD City, Kota Wisata, dan Grand Wisata menyumbang sekitar **82,7%** dari total revenue tertunda lebih dari 6 bulan, sehingga menjadi prioritas utama untuk collection recovery.
 
 ### 3. Vacant Property Risk
 
-Vacant units show a much higher tunggakan rate compared to occupied units. The vacant unit tunggakan rate reaches **59.7%**, almost 3 times higher than occupied units. Chi-Square Test shows a significant relationship between occupancy status and tunggakan status with **p < 0.01**.
+Unit vacant memiliki rasio tunggakan jauh lebih tinggi dibanding unit occupied. Rasio tunggakan unit vacant mencapai **59,7%**, hampir 3 kali lebih tinggi dibanding occupied. Chi-Square Test menunjukkan hubungan signifikan antara occupancy status dan status tunggakan dengan **p < 0,01**.
 
 ### 4. Collection Data Quality
 
-Missing contact number is not statistically significant as a direct cause of tunggakan, with **p > 0.05**. However, it remains an operational barrier because it limits the collection team's ability to follow up with unit owners. Missing contact is relatively evenly distributed across townships, approximately **19%–21%**.
+Missing contact number tidak terbukti signifikan secara statistik sebagai penyebab langsung tunggakan, dengan **p > 0,05**. Namun, missing contact tetap menjadi hambatan operasional karena membatasi kemampuan tim collection untuk melakukan follow-up kepada pemilik unit. Missing contact tersebar relatif merata antar township, yaitu sekitar **19%–21%**.
 
 ### 5. Payment Method Cleansing
 
-Payment method records were previously inconsistent, with multiple variations for the same payment channel. Cleaning reduced payment method categories from **10 categories to 5 standardized categories**, improving the consistency of channel analysis and finance reconciliation. However, payment method values marked as `None` still require attention.
+Data payment method sebelumnya tidak konsisten karena terdapat beberapa variasi penulisan untuk channel pembayaran yang sama. Proses cleansing mengurangi kategori payment method dari **10 kategori menjadi 5 kategori standar**, sehingga analisis channel pembayaran dan rekonsiliasi finance menjadi lebih konsisten. Namun, nilai payment method yang tercatat sebagai `None` tetap perlu menjadi perhatian.
 
 ### 6. Water Usage Outlier
 
-Extreme water usage outliers are relatively low, less than **1%**, but they still need validation because they may lead to inaccurate utility billing. The highest outlier rate is found in **BSD City - Commercial Ruko**, at approximately **0.65%**.
+Extreme water usage outlier relatif rendah, yaitu kurang dari **1%**, tetapi tetap perlu divalidasi karena dapat menyebabkan ketidakakuratan billing utilitas. Outlier tertinggi ditemukan pada **BSD City - Commercial Ruko**, yaitu sekitar **0,65%**.
 
 ### 7. ERP Logical Error
 
-ERP logical error analysis identifies invoices with `Paid` status where `payment_date` occurs before `handover_date`. This indicates a potential billing logic issue, data migration issue, or incorrect date mapping. The analysis found **6,291 anomaly invoices** with a total value of approximately **Rp8.35 billion**. Around **82.9%** of anomaly invoices are concentrated in BSD City, Kota Wisata, and Grand Wisata.
+Analisis ERP logical error mengidentifikasi invoice dengan status `Paid` tetapi memiliki `payment_date` lebih awal daripada `handover_date`. Kondisi ini mengindikasikan potensi billing logic issue, data migration issue, atau kesalahan mapping tanggal. Analisis menemukan **6.291 invoice anomali** dengan total nilai sekitar **Rp8,35 miliar**. Sekitar **82,9%** invoice anomali terkonsentrasi pada BSD City, Kota Wisata, dan Grand Wisata.
 
 ---
 
@@ -158,26 +158,26 @@ ERP logical error analysis identifies invoices with `Paid` status where `payment
 
 | Area | Key Finding | Business Impact |
 |---|---|---|
-| Revenue Leakage | Tunggakan rate is relatively similar across townships | Collection issue is systemic |
-| Aging Schedule | Outstanding >6 months reaches Rp82.51 billion | High recovery risk and delayed cashflow |
-| Vacant Property | Vacant tunggakan rate reaches 59.7% | Vacant units require special collection strategy |
-| Collection Data Quality | Missing contact is not significant statistically but affects follow-up | Slower collection process |
-| Payment Method | Categories reduced from 10 to 5 | Better reconciliation and channel analysis |
-| Water Usage Outlier | Outlier rate is low but still needs validation | Prevents utility billing errors |
-| ERP Logical Error | 6,291 invoices paid before handover, worth Rp8.35 billion | Risk of audit finding and incorrect revenue recording |
+| Revenue Leakage | Rasio tunggakan relatif mirip antar township | Masalah collection bersifat sistemik |
+| Aging Schedule | Outstanding >6 bulan mencapai Rp82,51 miliar | Risiko recovery tinggi dan cashflow tertunda |
+| Vacant Property | Rasio tunggakan unit vacant mencapai 59,7% | Unit vacant membutuhkan strategi collection khusus |
+| Collection Data Quality | Missing contact tidak signifikan secara statistik, tetapi menghambat follow-up | Proses collection menjadi lebih lambat |
+| Payment Method | Kategori turun dari 10 menjadi 5 | Rekonsiliasi dan analisis channel lebih konsisten |
+| Water Usage Outlier | Outlier rendah, tetapi tetap perlu validasi | Mencegah kesalahan billing utilitas |
+| ERP Logical Error | 6.291 invoice paid before handover senilai Rp8,35 miliar | Risiko audit finding dan salah pencatatan revenue |
 
 ---
 
 ## Recommendations
 
-- Apply **risk-based collection** using aging, outstanding amount, vacant status, and contact availability.
-- Prioritize collection on **BSD City, Kota Wisata, and Grand Wisata**, especially for invoices aged more than 6 months.
-- Create a dedicated collection segment for **vacant units**, especially vacant + unpaid/overdue units.
-- Perform regular contact number cleansing, focusing on units with **Missing Contact + Unpaid/Overdue** status.
-- Standardize payment method records and monitor `None` payment method values for finance reconciliation.
-- Validate extreme water usage before invoice issuance to reduce utility billing errors.
-- Implement ERP validation rules so that `payment_date` cannot be earlier than `handover_date` for active invoices.
-- Build continuous billing control monitoring through Looker Studio dashboards.
+- Terapkan **risk-based collection** berdasarkan aging, outstanding amount, vacant status, dan contact availability.
+- Prioritaskan collection pada **BSD City, Kota Wisata, dan Grand Wisata**, terutama untuk invoice dengan aging lebih dari 6 bulan.
+- Buat segment khusus untuk **unit vacant**, terutama unit vacant dengan status unpaid/overdue.
+- Lakukan cleansing contact number secara berkala, khususnya pada unit dengan kombinasi **Missing Contact + Unpaid/Overdue**.
+- Standarisasi data payment method dan monitor nilai `None` untuk mendukung rekonsiliasi finance.
+- Validasi extreme water usage sebelum invoice diterbitkan untuk mengurangi risiko kesalahan billing utilitas.
+- Terapkan ERP validation rule agar `payment_date` tidak boleh lebih awal dari `handover_date` untuk invoice aktif.
+- Bangun monitoring billing control secara berkelanjutan melalui dashboard Looker Studio.
 
 ---
 
@@ -188,7 +188,7 @@ ERP logical error analysis identifies invoices with `Paid` status where `payment
 | Looker Studio Dashboard | [Open Dashboard](https://datastudio.google.com/reporting/00e03556-32a8-4e33-b38c-46b9e3feef00) |
 | PowerPoint Presentation | [Open Presentation Folder](https://drive.google.com/drive/folders/1OQqQ37DDp1bikiGwiu11A8IK3GgJwfd3?usp=sharing) |
 | Personal Blog | [arissandohamzah.hantulaut.web.id](https://arissandohamzah.hantulaut.web.id/) |
-| LinkedIn | [Aris Sando Hamzah]([https://arissandohamzah.hantulaut.web.id/](https://www.linkedin.com/in/aris-sando-hamzah-5391501ab/)) |
+| LinkedIn | [Aris Sando Hamzah](https://www.linkedin.com/in/aris-sando-hamzah-5391501ab/) |
 
 ---
 
@@ -207,24 +207,24 @@ ERP logical error analysis identifies invoices with `Paid` status where `payment
 
 ---
 
-## How to Run
+## Cara Menjalankan Project
 
-1. Clone this repository.
+1. Clone repository ini.
 2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Open the notebook:
+3. Buka notebook:
 
 ```bash
 jupyter notebook SML_Estate_Billing_Control_Tower_Analysis.ipynb
 ```
 
-4. Run the notebook cells sequentially.
+4. Jalankan notebook cell secara berurutan.
 
-> BigQuery credentials and access are required to fully reproduce the analysis.
+> Credentials dan akses BigQuery diperlukan untuk mereproduksi analisis secara penuh.
 
 ---
 
