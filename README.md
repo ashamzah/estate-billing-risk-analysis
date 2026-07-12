@@ -188,7 +188,7 @@ ERP logical error analysis identifies invoices with `Paid` status where `payment
 | Looker Studio Dashboard | [Open Dashboard](https://datastudio.google.com/reporting/00e03556-32a8-4e33-b38c-46b9e3feef00) |
 | PowerPoint Presentation | [Open Presentation Folder](https://drive.google.com/drive/folders/1OQqQ37DDp1bikiGwiu11A8IK3GgJwfd3?usp=sharing) |
 | Personal Blog | [arissandohamzah.hantulaut.web.id](https://arissandohamzah.hantulaut.web.id/) |
-| LinkedIn | [arissandohamzah.hantulaut.web.id](https://arissandohamzah.hantulaut.web.id/) |
+| LinkedIn | [Aris Sando Hamzah]([https://arissandohamzah.hantulaut.web.id/](https://www.linkedin.com/in/aris-sando-hamzah-5391501ab/)) |
 
 ---
 
