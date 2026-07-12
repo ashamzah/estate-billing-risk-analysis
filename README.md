@@ -8,6 +8,14 @@ Project ini menganalisis data billing estate township untuk mengidentifikasi **r
 
 ---
 
+## Disclaimer Data
+
+Project ini merupakan **kasus fiktif** yang dibuat untuk tujuan pembelajaran dan portfolio data analyst. Data yang digunakan adalah **data dummy/simulasi**, bukan data operasional asli perusahaan. Seluruh nama entitas, struktur data, nilai transaksi, dan insight yang ditampilkan digunakan sebagai bahan latihan analisis, visualisasi, dashboarding, dan data storytelling.
+
+Analisis ini tidak merepresentasikan kondisi aktual Sinarmas Land maupun entitas bisnis terkait.
+
+---
+
 ## Gambaran Project
 
 Revenue township management dapat terdampak oleh invoice IPL yang belum dibayar, overdue receivables, unit vacant, data kontak pemilik yang tidak lengkap, pencatatan payment method yang tidak konsisten, outlier pemakaian air, serta anomali pada sistem ERP.
@@ -85,7 +93,7 @@ Output clean data:
 | Data Warehouse | BigQuery |
 | Visualization Tool | Looker Studio |
 
-> Catatan: Dataset asli tidak disertakan dalam repository ini karena bersifat confidential. Notebook berisi workflow analisis dan metodologi yang digunakan.
+> Catatan: Data yang digunakan dalam project ini merupakan data dummy/simulasi untuk pembelajaran. Dataset asli tidak disertakan dalam repository ini. Notebook berisi workflow analisis dan metodologi yang digunakan.
 
 ---
 
