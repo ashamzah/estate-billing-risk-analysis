@@ -193,7 +193,7 @@ Analisis ERP logical error mengidentifikasi invoice dengan status `Paid` tetapi 
 
 | Resource | Link |
 |---|---|
-| Looker Studio Dashboard | [Open Dashboard](https://datastudio.google.com/reporting/00e03556-32a8-4e33-b38c-46b9e3feef00) |
+| Looker Studio Dashboard | [Buka Dashboard](https://datastudio.google.com/reporting/00e03556-32a8-4e33-b38c-46b9e3feef00) |
 | Presentasi | [Buka PDF Presentasi](./presentation/SML%20Estate%20Billing%20Control%20Tower%20Analysis.pdf) |
 | Personal Blog | [arissandohamzah.hantulaut.web.id](https://arissandohamzah.hantulaut.web.id/) |
 | LinkedIn | [Aris Sando Hamzah](https://www.linkedin.com/in/aris-sando-hamzah-5391501ab/) |
